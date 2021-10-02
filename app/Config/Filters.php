@@ -20,7 +20,7 @@ class Filters extends BaseConfig
         'csrf' => CSRF::class,
         'toolbar' => DebugToolbar::class,
         'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-        'auth' => JWTAuthenticationFilter::class // add this line
+        'auth' => JWTAuthenticationFilter::class
     ];
     /**
      * List of filter aliases that are always

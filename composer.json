@@ -9,7 +9,8 @@
         "codeigniter4/framework": "^4",
         "twbs/bootstrap": "4.0.0",
         "firebase/php-jwt": "^5.4",
-        "ext-json": "*"
+        "ext-json": "*",
+        "vlucas/phpdotenv": "^5.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
