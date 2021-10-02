@@ -7,7 +7,9 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "codeigniter4/framework": "^4",
-        "twbs/bootstrap": "4.0.0"
+        "twbs/bootstrap": "4.0.0",
+        "firebase/php-jwt": "^5.4",
+        "ext-json": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",

@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\JWTAuthenticationFilter;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -16,11 +17,11 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
-        'csrf'     => CSRF::class,
-        'toolbar'  => DebugToolbar::class,
-        'honeypot' => Honeypot::class,
+        'csrf' => CSRF::class,
+        'toolbar' => DebugToolbar::class,
+        'honeypot' => \CodeIgniter\Filters\Honeypot::class,
+        'auth' => JWTAuthenticationFilter::class // add this line
     ];
-
     /**
      * List of filter aliases that are always
      * applied before and after every request.
@@ -33,7 +34,7 @@ class Filters extends BaseConfig
             // 'csrf',
         ],
         'after' => [
-            'toolbar',
+            // 'toolbar',
             // 'honeypot',
         ],
     ];
@@ -58,5 +59,12 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = [];
+    public $filters = [
+        'auth' => [
+            'before' => [
+                'client/*',
+                'client'
+            ],
+        ]
+    ];
 }
