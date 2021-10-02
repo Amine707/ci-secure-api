@@ -12,7 +12,7 @@ class Auth extends BaseController
 {
     /**
      * Register a new user
-     * @return Response
+     * @return ResponseInterface
      * @throws ReflectionException
      */
     public function register()
@@ -48,7 +48,7 @@ class Auth extends BaseController
 
     /**
      * Authenticate Existing User
-     * @return Response
+     * @return ResponseInterface
      */
     public function login()
     {
